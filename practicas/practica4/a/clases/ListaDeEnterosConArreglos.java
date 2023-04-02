@@ -1,4 +1,5 @@
-package prog3.listaenteros;
+package practica4.a.clases;
+
 
 /**
  * La clase ListaDeEnterosConArreglos es una ListaDeEnteros con capacidad fija y

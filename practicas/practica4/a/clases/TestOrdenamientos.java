@@ -1,3 +1,5 @@
+package practica4.a.clases;
+
 public class TestOrdenamientos {     
     public static void main(String[] args){
         ListaDeEnterosEnlazada l = new ListaDeEnterosEnlazada();

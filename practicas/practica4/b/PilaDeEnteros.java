@@ -1,10 +1,6 @@
-package prog3.util;
-
-import prog3.listaenteros.ListaDeEnteros;
-
 public class PilaDeEnteros {
 
-	ListaDeEnteros datos;
+	ListaDeEnteros datos;	
 
 	public PilaDeEnteros() {
 

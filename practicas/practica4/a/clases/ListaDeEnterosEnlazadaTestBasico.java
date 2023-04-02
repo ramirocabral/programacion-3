@@ -1,3 +1,6 @@
+package practica4.a.clases;
+
+
 public class ListaDeEnterosEnlazadaTestBasico {     
     public static void main(String[] args){
         ListaDeEnterosEnlazada l = new ListaDeEnterosEnlazada();
