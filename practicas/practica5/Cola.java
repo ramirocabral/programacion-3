@@ -1,13 +1,13 @@
 public class Cola<T> {
     private ListaGenericaEnlazada<T> l;
 
-    public void Encolar(T dato){
-        if (this.l.esVacia())
-            l = new ListaGenericaEnlazada<>();
+    public void encolar(T dato){
+        if (this.l == null)
+            l = new ListaGenericaEnlazada<T>();
         this.l.agregarFinal(dato);
     }
 
-    public T Desencolar(){
+    public T desencolar(){
         if (this.l.esVacia())
             return null;
         T dato = this.l.elemento(0);
@@ -15,13 +15,16 @@ public class Cola<T> {
         return dato;
     }
 
-    public T Tope(){
+    public T tope(){
         if (this.l.esVacia())
             return null;
         return this.l.elemento(0);
     }
 
     public boolean esVacia(){
+        if (this.l == null){
+            return true;
+        }
         return this.l.esVacia();
     }
 
