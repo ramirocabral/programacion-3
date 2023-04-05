@@ -1,6 +1,7 @@
+
 public class Utiles {
     public Integer sumaMaximaVertical(ArbolBinario<Integer> arbol){
-        if (!arbol.esVacio()){
+        if (arbol != null){
             if (arbol.esHoja())
                 return (arbol.getDato());
             
@@ -44,6 +45,31 @@ public class Utiles {
 			}
 		return sumaMax;
     }
+
+    public ListaGenericaEnlazada<Integer> trayectoriaPesada(ArbolBinario<Integer> arbol){
+        ListaGenericaEnlazada<Integer> res = new ListaGenericaEnlazada<Integer>();
+        int nivel = 0;
+        int suma = 0;
+        trayectoriaPesada(arbol, res, nivel, suma);
+        return res;
+    }
+
+    public void trayectoriaPesada(ArbolBinario<Integer> arbol, ListaGenericaEnlazada<Integer> res, int nivel, int suma){
+        Integer valor = nivel*arbol.getDato();
+        if (arbol.esHoja()){
+            res.agregarFinal(valor);
+        }
+        else{
+            Integer miSuma = suma + valor;
+            if (arbol.tieneHijoIzquierdo()){
+                trayectoriaPesada(arbol.getHijoIzquierdo(), res, nivel++, miSuma);
+            }
+            if (arbol.tieneHijoDerecho()){
+                trayectoriaPesada(arbol.getHijoDerecho(), res, nivel++, miSuma);
+            }
+        }
+    }
+
 
 
 }

@@ -4,7 +4,7 @@ public class ArbolBinarioTest {
 	
 	public static void main(String[] args) {
 
-		ArbolBinario<Integer> arbolBinarioA;
+/* 		ArbolBinario<Integer> arbolBinarioA;
 		ArbolBinario<Integer> arbolBinarioB;
 		ArbolBinario<Integer> arbolBinarioC;
 		ArbolBinario<Integer> arbolBinarioD;
@@ -85,7 +85,48 @@ public class ArbolBinarioTest {
 		//---------------------------------------------------------------------------------------------------------
 
 		System.out.println(arbolBinarioA.esLLeno()); ///////// mis dos huevos
-		System.out.println(arbolBinarioD.esLLeno());
+		System.out.println(arbolBinarioD.esLLeno()); */
+
+	//	ListaGenericaEnlazada<String> l = new ListaGenericaEnlazada<String>();
+
+
+		// test ADIVINANZAS
+
+		ArbolBinario<String> arbolBinarioX=new ArbolBinario<String>("¿Tiene 4 patas?");
+        ArbolBinario<String> hijoIzquierdoX=new ArbolBinario<String>("¿Se mueve?");
+        hijoIzquierdoX.agregarHijoIzquierdo(new ArbolBinario<String>("¿Ladra?"));
+        hijoIzquierdoX.getHijoIzquierdo().agregarHijoIzquierdo(new ArbolBinario<String>("Es un perro"));
+        hijoIzquierdoX.agregarHijoDerecho(new ArbolBinario<String>("Es una mesa"));
+        ArbolBinario<String> hijoDerechoX = new ArbolBinario<String>("¿Tiene alguna pata?");
+		hijoDerechoX.agregarHijoDerecho(new ArbolBinario<String>("Es una chota"));
+		hijoDerechoX.getHijoDerecho().agregarHijoDerecho(new ArbolBinario<String>("Es una cabra"));
+        arbolBinarioX.agregarHijoIzquierdo(hijoIzquierdoX);
+        arbolBinarioX.agregarHijoDerecho(hijoDerechoX);
+
+/* 		arbolBinarioX.inOrder();
+
+		Adivinanza a = new Adivinanza();
+
+		ListaGenericaEnlazada<String> L2 = new ListaGenericaEnlazada<String>();
+
+		L2 = a.secuenciaConMasPreguntas(arbolBinarioX);
+
+		System.out.println(L2.toString());   */
+
+		// funciona con primera
+ 		arbolBinarioX.inOrder();
+
+
+		Adivinanza a = new Adivinanza();
+
+		ListaGenericaEnlazada<ListaGenericaEnlazada<String>> ej2 = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
+		
+        ej2 = a.secuenciasConMasPreguntas2(arbolBinarioX);
+
+		for (int i=0; i < ej2.tamanio(); i++){
+			System.out.println(ej2.elemento(i).toString());
+		}
+
 	}
 }
 	
