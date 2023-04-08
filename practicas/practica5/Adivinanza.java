@@ -29,44 +29,52 @@ public  class Adivinanza {
         }
     }
 
-    // chat gpt
 
-    public ListaGenericaEnlazada<ListaGenericaEnlazada<String>> secuenciasConMasPreguntas2(ArbolBinario<String> abinario) {
-        if (abinario.esVacio()) {
-            return null;
-        }
-    
-        if (abinario.esHoja()) {
-            ListaGenericaEnlazada<String> result = new ListaGenericaEnlazada<String>();
-            result.agregarInicio(abinario.getDato());
-            ListaGenericaEnlazada<ListaGenericaEnlazada<String>> res = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
-            res.agregarInicio(result);
+        public ListaGenericaEnlazada<ListaGenericaEnlazada<String>> secuenciaConMasPreguntas2(ArbolBinario<String> abinario) {
+          ListaGenericaEnlazada<ListaGenericaEnlazada<String>> izq, der;
+          ListaGenericaEnlazada<ListaGenericaEnlazada<String>> res = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
+          if (abinario.esHoja()) {
+            ListaGenericaEnlazada<String> res1 = new ListaGenericaEnlazada<String>();
+            res1.agregarInicio(abinario.getDato());
+            res.agregarInicio(res1);
             return res;
-        }
-    
-        ListaGenericaEnlazada<ListaGenericaEnlazada<String>> izq = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
-        ListaGenericaEnlazada<ListaGenericaEnlazada<String>> der = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
-    
-        if(abinario.tieneHijoIzquierdo())
-            izq = secuenciasConMasPreguntas2(abinario.getHijoIzquierdo());
-        if(abinario.tieneHijoDerecho())
-            der = secuenciasConMasPreguntas2(abinario.getHijoDerecho());
-    
-        ListaGenericaEnlazada<ListaGenericaEnlazada<String>> result = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
-    
-        if ((der.elemento(0) == null) && (izq.elemento(0).tamanio() >= der.elemento(0).tamanio())) {
-            for (int i = 0; i < izq.tamanio(); i++) {
-                izq.elemento(i).agregarInicio(abinario.getDato());
-                result.agregarFinal(izq.elemento(i));
+          }
+          izq = secuenciaConMasPreguntas2(abinario.getHijoIzquierdo());
+          der = secuenciaConMasPreguntas2(abinario.getHijoDerecho());
+          izq.comenzar();
+          der.comenzar();
+          if (izq.elemento(0).tamanio() > der.elemento(0).tamanio()) {
+            int i = 0;
+            while (izq.elemento(i)!=null) {
+              izq.elemento(i).agregarInicio("Si");
+              izq.elemento(i).agregarInicio(abinario.getDato());
+              i++;
             }
-        } else {
-            for (int i = 0; i < der.tamanio(); i++) {
+            return izq;
+          } else if (izq.elemento(0).tamanio() < der.elemento(0).tamanio()){
+              int i = 0;
+              while (der.elemento(i)!=null) {
+                der.elemento(i).agregarInicio("Si");
                 der.elemento(i).agregarInicio(abinario.getDato());
-                result.agregarFinal(der.elemento(i));
-            }
+                i++;
+              }
+              return der;
+            } else {
+              int i = 0;
+              while (izq.elemento(i) != null) {
+                izq.elemento(i).agregarInicio("Si");
+                izq.elemento(i).agregarInicio(abinario.getDato());
+                res.agregarFinal(izq.elemento(i));
+                i++;
+              }
+              i = 0;
+              while (der.elemento(i)!=null) {
+                der.elemento(i).agregarInicio("Si");
+                der.elemento(i).agregarInicio(abinario.getDato());
+                res.agregarFinal(der.elemento(i));
+                i++;
+              }
+            return res;
+          }
         }
-        
-        return result;
-    }
-
 }

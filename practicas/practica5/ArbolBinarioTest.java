@@ -114,14 +114,15 @@ public class ArbolBinarioTest {
 		System.out.println(L2.toString());   */
 
 		// funciona con primera
- 		arbolBinarioX.inOrder();
+
+		System.out.println(arbolBinarioX.esLleno());
 
 
 		Adivinanza a = new Adivinanza();
 
 		ListaGenericaEnlazada<ListaGenericaEnlazada<String>> ej2 = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
 		
-        ej2 = a.secuenciasConMasPreguntas2(arbolBinarioX);
+        ej2 = a.secuenciaConMasPreguntas2(arbolBinarioX);
 
 		for (int i=0; i < ej2.tamanio(); i++){
 			System.out.println(ej2.elemento(i).toString());
