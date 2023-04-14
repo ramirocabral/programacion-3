@@ -1,3 +1,4 @@
+import practica6.ListaGenericaEnlazada;
 
 public  class Adivinanza {
 

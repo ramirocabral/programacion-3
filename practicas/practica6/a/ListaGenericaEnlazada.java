@@ -1,4 +1,4 @@
-
+package a;
 
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de

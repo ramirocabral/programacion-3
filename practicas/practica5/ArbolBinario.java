@@ -1,3 +1,6 @@
+import practica6.Cola;
+import practica6.ListaGenerica;
+import practica6.ListaGenericaEnlazada;
 
 public class ArbolBinario<T> {
 	private T dato;

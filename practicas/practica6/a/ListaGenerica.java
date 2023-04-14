@@ -1,3 +1,4 @@
+package a;
 
 /**
  * ListaDeEnteros es una clase abstracta que define los métodos que deberán

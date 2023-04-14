@@ -1,6 +1,3 @@
-
-
-
 /**
  * Esta clase representa un nodo de la lista de enteros enlazada.
  * */
