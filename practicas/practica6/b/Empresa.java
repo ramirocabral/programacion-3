@@ -104,19 +104,19 @@ public class Empresa {
         }
 
         while(true){
-            ArbolGeneral<Empleado> temp = aux.getHijos().elemento(0);
+            ArbolGeneral<Empleado> max = aux.getHijos().elemento(0);  //almacenamos el empleado de mayor categoria
             for (int i = 1; i< aux.getHijos().tamanio(); i++){
-                if (aux.getHijos().elemento(i).getDato().getCategoria() > temp.getDato().getCategoria()){
-                    temp = aux.getHijos().elemento(i);
+                if (aux.getHijos().elemento(i).getDato().getCategoria() > max.getDato().getCategoria()){
+                    max = aux.getHijos().elemento(i);
                 }
             }
-            temp.getDato().setCategoria(temp.getDato().getCategoria() - 1);
-            aux.setDato(temp.getDato());
-            if (temp.esHoja()){
-                aux.eliminarHijo(temp);
+            max.getDato().setCategoria(max.getDato().getCategoria() - 1);
+            aux.setDato(max.getDato());
+            if (max.esHoja()){
+                aux.eliminarHijo(max);
                 break;
             }
-            aux = temp;
+            aux = max;
         }
     }
 

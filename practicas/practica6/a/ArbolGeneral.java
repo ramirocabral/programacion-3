@@ -80,7 +80,7 @@ public class ArbolGeneral<T> {
 			return altura + 1;
 		}
 	}
-
+ 
 	public boolean include (T data){
 		if (this.dato.equals(data))
 			return true;
