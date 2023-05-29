@@ -1,3 +1,6 @@
+import practicas.practica7.ej6.ListaGenerica;
+import practicas.practica7.ej6.ListaGenericaEnlazada;
+
 public class TRIE {
 
     private ArbolGeneral<Character> trie;

@@ -1,4 +1,7 @@
 package a;
+
+import practicas.practica7.ej6.Cola;
+
 public class ArbolGeneral<T> {
 
 	private T dato;

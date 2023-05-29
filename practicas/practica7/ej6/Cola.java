@@ -1,4 +1,4 @@
-package a;
+package practicas.practica7.ej6;
 public class Cola<T> {
     private ListaGenericaEnlazada<T> l;
 
