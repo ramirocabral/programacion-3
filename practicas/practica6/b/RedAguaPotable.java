@@ -1,3 +1,5 @@
+import practicas.practica7.ej6.ListaGenerica;
+
 public class RedAguaPotable {
     public static void main(String[] args){
         ArbolGeneral<Double> a = new ArbolGeneral<Double>(1.0);

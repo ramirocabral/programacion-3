@@ -1,12 +1,10 @@
-import practicas.practica7.ej6.ListaGenericaEnlazada;
-
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de
  * la lista (nodos) referencian al siguiente elemento (nodo), por este motivo,
  * la ListaEnlazadaGenerica  no tiene limite en la cantidad de elementos que se
  * pueden almacenar.
  * */
-public class ListaGenericaEnlazada<T> extends ListaGenerica<T>{
+public class ListaGenericaEnlazada<T> extends ListaGenerica<T> {
 	/* primer nodo de la lista, si la lista esta vacia, inicio es null */
 	private NodoGenerico<T> inicio;
 
@@ -182,18 +180,5 @@ public class ListaGenericaEnlazada<T> extends ListaGenerica<T>{
 	@Override
 	public boolean esVacia() {
 		return this.tamanio() == 0;
-	}
-
-	public ListaGenericaEnlazada<T> invertir(){
-		ListaGenericaEnlazada<T> invertida = new ListaGenericaEnlazada<T>();
-		this.enlazar(invertida,this.inicio);
-		return invertida;
-	}
-
-	public void enlazar(ListaGenericaEnlazada<T> invertida, NodoGenerico<T> elem){
-		if (elem != null){
-			invertida.agregarInicio(elem.getDato());
-			enlazar(invertida,elem.getSiguiente());
-		}		
 	}
 }

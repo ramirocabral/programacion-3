@@ -1,4 +1,3 @@
-package a;
 public class Cola<T> {
     private ListaGenericaEnlazada<T> l;
 

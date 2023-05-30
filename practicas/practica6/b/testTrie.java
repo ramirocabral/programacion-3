@@ -1,3 +1,5 @@
+import practicas.practica7.ej6.ListaGenerica;
+
 public class testTrie {
     public static void main(String[] args) {
         TRIE trie = new TRIE();

@@ -25,7 +25,7 @@ public class utilitariosLista {
         int mitad = l.tamanio() / 2;
         ListaDeEnterosEnlazada l1 = new ListaDeEnterosEnlazada();
         ListaDeEnterosEnlazada l2 = new ListaDeEnterosEnlazada();
-        for (int i = 0; i < mitad; i++){
+        for (int i = 0; i < mitad; i++){        //obtenemos las listas izquierda y derecha
             l1.agregarFinal(l.elemento(i));
         }
         for (int i = mitad; i < l.tamanio(); i++){
@@ -40,7 +40,7 @@ public class utilitariosLista {
         int i = 0;
         int j = 0;
         ListaDeEnterosEnlazada res = new ListaDeEnterosEnlazada();
-        while (i < l1.tamanio() && j < l2.tamanio()){
+        while ((i < l1.tamanio()) && (j < l2.tamanio())){  //l1 y l2 llegan ordenadas
             if (l1.elemento(i) < l2.elemento(j)){
                 res.agregarFinal(l1.elemento(i));
                 i++;
@@ -50,7 +50,7 @@ public class utilitariosLista {
                 j++;
             }
         }
-        while (i < l1.tamanio()){
+        while (i < l1.tamanio()){                          //metemos los elementos que quedaron en la lista que no se vacio
             res.agregarFinal(l1.elemento(i));
             i++;
         }
@@ -58,6 +58,6 @@ public class utilitariosLista {
             res.agregarFinal(l2.elemento(j));
             j++;
         }
-        return res;
+        return res;                                        //devolvemos una nueva lista ordenada
     }
 }

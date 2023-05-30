@@ -1,4 +1,7 @@
 package a;
+
+import practicas.practica7.ej6.Cola;
+
 public class ArbolGeneral<T> {
 
 	private T dato;
@@ -80,7 +83,7 @@ public class ArbolGeneral<T> {
 			return altura + 1;
 		}
 	}
-
+ 
 	public boolean include (T data){
 		if (this.dato.equals(data))
 			return true;

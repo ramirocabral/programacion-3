@@ -1,3 +1,7 @@
+import practicas.practica7.ej6.Cola;
+import practicas.practica7.ej6.ListaGenerica;
+import practicas.practica7.ej6.ListaGenericaEnlazada;
+
 public class ArbolGeneral<T> {
 
 	private T dato;
