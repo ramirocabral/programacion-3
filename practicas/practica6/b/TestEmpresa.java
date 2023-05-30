@@ -1,3 +1,8 @@
+package practica6.b;
+
+
+import arbolGeneral.*;
+
 public class TestEmpresa {
 
   public static void main(String[] args) {

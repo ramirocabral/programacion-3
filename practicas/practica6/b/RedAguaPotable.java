@@ -1,4 +1,8 @@
-import practicas.practica7.ej6.ListaGenerica;
+package practica6.b;
+
+
+import listaGenerica.ListaGenerica;
+import arbolGeneral.ArbolGeneral;
 
 public class RedAguaPotable {
     public static void main(String[] args){

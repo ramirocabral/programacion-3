@@ -1,3 +1,5 @@
+package practica6.b;
+
 public class Empleado {
     private String nombre;
     private int antiguedad;

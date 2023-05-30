@@ -1,5 +1,9 @@
-import practicas.practica7.ej6.ListaGenerica;
-import practicas.practica7.ej6.ListaGenericaEnlazada;
+package practica6.b;
+
+
+import listaGenerica.ListaGenerica;
+import listaGenerica.ListaGenericaEnlazada;
+import arbolGeneral.*;
 
 public class TRIE {
 

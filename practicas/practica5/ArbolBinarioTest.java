@@ -1,6 +1,7 @@
-import practica6.ListaGenericaEnlazada;
+import arbolBinario.ArbolBinario;
+import listaGenerica.ListaGenericaEnlazada;
 
-public class ArbolBinarioTest {
+public class ArbolBinarioTest{
 
 	
 	public static void main(String[] args) {
@@ -123,11 +124,6 @@ public class ArbolBinarioTest {
 
 		ListaGenericaEnlazada<ListaGenericaEnlazada<String>> ej2 = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
 		
-        ej2 = a.secuenciaConMasPreguntas2(arbolBinarioX);
-
-		for (int i=0; i < ej2.tamanio(); i++){
-			System.out.println(ej2.elemento(i).toString());
-		}
 
 	}
 }

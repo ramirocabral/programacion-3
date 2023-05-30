@@ -1,3 +1,5 @@
+import listaGenerica.*;
+
 public class TestBalanceo {
     public static void main(String[] args){
         StringBuffer s = new StringBuffer("({[(()]})");

@@ -1,4 +1,5 @@
-import practica6.ListaGenericaEnlazada;
+import listaGenerica.ListaGenericaEnlazada;
+import arbolBinario.ArbolBinario;
 
 public  class Adivinanza {
 

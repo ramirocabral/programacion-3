@@ -1,5 +1,6 @@
-import practica6.Cola;
-import practica6.ListaGenericaEnlazada;
+import listaGenerica.Cola;
+import listaGenerica.ListaGenericaEnlazada;
+import arbolBinario.ArbolBinario;
 
 public class Utiles {
     public Integer sumaMaximaVertical(ArbolBinario<Integer> arbol){

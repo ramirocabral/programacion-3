@@ -1,4 +1,7 @@
-package a;
+package practica6.a;
+
+import arbolGeneral.*;
+
 public class Test {
     public static void main(String[] args){
         ArbolGeneral<Integer> a = new ArbolGeneral<Integer>(1);

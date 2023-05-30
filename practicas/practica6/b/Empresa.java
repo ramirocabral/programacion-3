@@ -1,5 +1,9 @@
-import practicas.practica7.ej6.Cola;
-import practicas.practica7.ej6.ListaGenerica;
+package practica6.b;
+
+
+import listaGenerica.Cola;
+import listaGenerica.ListaGenerica;
+import arbolGeneral.*;
 
 public class Empresa {
     private ArbolGeneral<Empleado> empleados;

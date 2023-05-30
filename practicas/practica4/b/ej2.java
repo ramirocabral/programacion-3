@@ -1,3 +1,4 @@
+import listaGenerica.*;
 
 public class ej2 {
     public static void main(String[] args){
@@ -18,8 +19,6 @@ public class ej2 {
         System.out.println("Invertida:");
 
         ListaGenericaEnlazada<Integer> invertida = new ListaGenericaEnlazada<Integer>();
-
-        invertida = l.invertir();
 
         System.out.println(invertida.toString());  
 

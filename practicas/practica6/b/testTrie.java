@@ -1,4 +1,7 @@
-import practicas.practica7.ej6.ListaGenerica;
+package practica6.b;
+
+
+import listaGenerica.ListaGenerica;
 
 public class testTrie {
     public static void main(String[] args) {
