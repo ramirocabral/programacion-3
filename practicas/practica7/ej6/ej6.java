@@ -31,8 +31,9 @@ public class ej6 {
       grafo.conectar(v4, v7, 4);
       grafo.conectar(v4, v8, 5);
   
-      mapa mapa = new mapa(grafo);
+      Mapa mapa = new Mapa(grafo);
   
       System.out.println("El camino desde Buenos Aires a San Juan es: " + mapa.devolverCamino("Buenos Aires", "San Juan"));
   
     }
+}

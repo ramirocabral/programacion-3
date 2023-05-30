@@ -1,4 +1,3 @@
-package practicas.practica7.ej6;
 public class RecorridosTest {
     public static void main(String[] args) {
         Vertice<String> v1 = new VerticeImplListAdy<String>("Buenos Aires");
