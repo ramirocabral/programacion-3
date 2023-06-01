@@ -14,9 +14,4 @@ public interface Grafo<T> {
 	public int peso(Vertice<T> origen, Vertice<T> destino);
 	public ListaGenerica<Arista<T>> listaDeAdyacentes(Vertice<T> v);
 	public Vertice<T> vertice(int posicion); 
-
-
-
-
-
 }

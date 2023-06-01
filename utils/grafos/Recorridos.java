@@ -15,6 +15,7 @@ public class Recorridos<T> {
         }
         return l;
     }
+
     private void dfs(int i, Grafo<T> grafo, boolean[] marca,ListaGenerica<Vertice<T>> l){
         marca[i] = true;
         Vertice<T> v = grafo.listaDeVertices().elemento(i);
@@ -23,8 +24,8 @@ public class Recorridos<T> {
         ady.comenzar();
         while(!ady.fin()){
             int j = ady.proximo().verticeDestino().posicion();
-            if(!marca[j])
-            this.dfs(j, grafo, marca,l);
+            if(!marca[j]) 
+                this.dfs(j, grafo, marca,l);
         }
     }
 
