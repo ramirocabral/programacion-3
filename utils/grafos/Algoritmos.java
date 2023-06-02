@@ -1,7 +1,6 @@
 package grafos;
 
 import listaGenerica.ListaGenerica;
-import listaGenerica.ListaGenericaEnlazada;
 
 public class Algoritmos<T> {
 

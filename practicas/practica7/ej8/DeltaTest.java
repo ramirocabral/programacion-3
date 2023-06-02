@@ -10,9 +10,9 @@ public class DeltaTest {
         Vertice<String> v4 = new VerticeImplListAdy<String>("Creta");
         Vertice<String> v5 = new VerticeImplListAdy<String>("Ibiza");
         Vertice<String> v6 = new VerticeImplListAdy<String>("Sicilia");
-        Vertice<String> v7 = new VerticeImplListAdy<String>("Galápagos");
+        Vertice<String> v7 = new VerticeImplListAdy<String>("Galapagos");
         Vertice<String> v8 = new VerticeImplListAdy<String>("Tasmania");
-        Vertice<String> v9 = new VerticeImplListAdy<String>("Islas Vírgenes Británicas");
+        Vertice<String> v9 = new VerticeImplListAdy<String>("Islas Vargenes Britanicas");
         Vertice<String> v10 = new VerticeImplListAdy<String>("Jamaica");
 
         Grafo<String> islas = new GrafoImplListAdy<String>();
@@ -52,12 +52,11 @@ public class DeltaTest {
 
         //System.out.println("El numero maximo de islas que se puede recorrer con un unico boleto es " + D.maxIslasDistintas(islas)); //RTA: 5
         
-        RutaMinima rutMin = D.caminoMasCorto(islas, "Hawai", "Tasmania");
-        System.out.println("El camino mas corto para llegar de Hawai a Tasmania es " + rutMin.getCamino()); //Si o si hay al menos un camino
+        RutaMinima rutMin = D.caminoMasCorto(islas, "Hawai", "Bali");
+        System.out.println("El camino mas corto para llegar de Hawai a Bali es " + rutMin.getCamino()); //Si o si hay al menos un camino
         if (rutMin.getNuevo()) 
             System.out.println("Es necesario comprar mas de un boleto.");
         else
             System.out.println("Solo es necesario comprar un unico boleto.");
     }
-
 }

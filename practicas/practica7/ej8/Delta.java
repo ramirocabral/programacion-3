@@ -39,7 +39,6 @@ public class Delta {
         boolean[] visitados = new boolean[grafo.listaDeVertices().tamanio()];
         RutaMinima res = new RutaMinima();
         RutaMinima aux = new RutaMinima();
-        aux.setNuevo(false);
         Vertice<String> vInicial = null;
         Vertice<String> vFinal = null;
         if (grafo != null && !grafo.esVacio()){
@@ -50,12 +49,50 @@ public class Delta {
                 if (vAux.dato().equals(islaO)) vInicial = vAux;
                 if (vAux.dato().equals(islaD)) vFinal = vAux;
             }
-            if (vInicial != null && vFinal != null){
-                //caminoMasCorto(grafo, visitados, vInicial, vFinal, res, aux);
-            }
+            if (vInicial != null && vFinal != null)
+                caminoMasCorto(grafo, visitados, vInicial, vFinal,aux,res);
         }
         return res;
     }
 
-    //usar dijkstra
+    private void caminoMasCorto(Grafo<String> grafo, boolean[] visitados, Vertice<String> vInicial, Vertice<String> vFinal, RutaMinima aux, RutaMinima res){
+        visitados[vInicial.posicion()] = true;
+        aux.getCamino().agregarFinal(vInicial.dato());
+        if (vInicial.equals(vFinal)){
+            if (res.getCamino().esVacia() || aux.getLongitud() < res.getLongitud()){
+                res.setNuevo(aux.getNuevo());
+                res.setLongitud(aux.getLongitud());;
+                copiarLista(aux.getCamino(), res.getCamino());
+            }
+        } else {
+            ListaGenerica<Arista<String>> ady = grafo.listaDeAdyacentes(vInicial);
+            ady.comenzar();
+            while (!ady.fin()){
+                Arista<String> arista = ady.proximo();
+                Vertice<String> vAux = arista.verticeDestino();
+                if (!visitados[vAux.posicion()]){
+                    aux.setLongitud(aux.getLongitud() + arista.peso());
+                    if (vAux.posicion() == 0){
+                        aux.setNuevo(true);  
+                        caminoMasCorto(grafo, visitados, vAux, vFinal, aux, res);
+                        aux.setNuevo(false);
+                    }
+                    else
+                        caminoMasCorto(grafo, visitados, vAux, vFinal, aux, res);
+                    }
+                    aux.setLongitud(aux.getLongitud() - arista.peso());
+                }
+            }
+        aux.getCamino().eliminarEn(aux.getCamino().tamanio()-1);
+        visitados[vInicial.posicion()] = false;
+    }
+
+    private void copiarLista(ListaGenerica<String> caminoAct, ListaGenerica<String> camino){
+        while (!camino.esVacia())
+            camino.eliminarEn(0);
+        caminoAct.comenzar();
+        while (!caminoAct.fin())
+            camino.agregarFinal(caminoAct.proximo());
+    }
+
 }
