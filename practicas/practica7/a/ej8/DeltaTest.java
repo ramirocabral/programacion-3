@@ -1,4 +1,4 @@
-package practica7.ej8;
+package practica7.a.ej8;
 
 import grafos.*;
 

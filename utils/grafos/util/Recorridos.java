@@ -1,7 +1,10 @@
-package grafos;
+package grafos.util;
 
 import listaGenerica.ListaGenerica;
 import listaGenerica.ListaGenericaEnlazada;
+import grafos.Arista;
+import grafos.Grafo;
+import grafos.Vertice;
 import listaGenerica.Cola;
 
 public class Recorridos<T> {

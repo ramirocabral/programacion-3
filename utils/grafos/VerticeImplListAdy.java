@@ -82,4 +82,9 @@ public class VerticeImplListAdy<T> implements Vertice<T> {
 		posicion = pos; 
 	}
 
+	@Override
+	public String toString() {
+		return dato.toString();
+	}
+
 }

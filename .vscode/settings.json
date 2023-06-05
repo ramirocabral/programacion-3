@@ -2,12 +2,9 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "utils",
-        "practicas/practica7/grafos",
-        "practicas/practica7/ej6",
-        "practicas/practica7/ej5",
-        "practicas/practica7/6",
         "practicas/practica5",
         "practicas/practica4/b",
         "practicas"
-    ]
+    ],
+    "java.format.settings.url": "eclipse-formatter.xml"
 }

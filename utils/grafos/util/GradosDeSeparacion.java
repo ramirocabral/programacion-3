@@ -1,7 +1,11 @@
-package grafos;
+package grafos.util;
 
 import listaGenerica.*;
 import java.util.Arrays;
+
+import grafos.Arista;
+import grafos.Grafo;
+import grafos.Vertice;
 
 //copypaste gonza
 public class GradosDeSeparacion {

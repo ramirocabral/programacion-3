@@ -1,4 +1,4 @@
-package practica7.ej9;
+package practica7.a.ej9;
 
 import grafos.*;
 import listaGenerica.*;

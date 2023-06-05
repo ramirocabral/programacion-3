@@ -1,6 +1,7 @@
-package practica7.ej7;
+package practica7.a.ej7;
 
 import grafos.*;
+import grafos.util.Algoritmos;
 
 public class AlgoritmosTest {
     public static void main(String[] args) {

@@ -1,5 +1,8 @@
-package grafos;
+package grafos.util;
 
+import grafos.Arista;
+import grafos.Grafo;
+import grafos.Vertice;
 import listaGenerica.ListaGenerica;
 
 public class Algoritmos<T> {

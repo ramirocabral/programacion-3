@@ -78,7 +78,16 @@ public class GrafoImplMatrizAdy<T> implements Grafo<T> {
 	
 	public Vertice<T> vertice(int posicion) {
 		return vertices.elemento(posicion);
-	} 
+	}
+
+	public void imprimirMatriz(){
+		for (int i=0; i<vertices.tamanio(); i++){
+			for (int j=0; j<vertices.tamanio(); j++){
+				System.out.print(matrizAdy[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
 
 
 }

@@ -81,7 +81,7 @@ public abstract class ListaGenerica<T> {
 	public abstract boolean incluye(T elem);
 
 	/**
-	 * devuelve true si la lista no contiene elemntos, false en caso contrario
+	 * devuelve true si la lista no contiene elementos, false en caso contrario
 	 * */
 	public abstract boolean esVacia();
 

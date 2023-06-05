@@ -1,8 +1,8 @@
 import grafos.VerticeImplListAdy;
+import grafos.util.Recorridos;
 import grafos.Vertice;
 import grafos.Grafo;
 import grafos.GrafoImplListAdy;
-import grafos.Recorridos;
 import listaGenerica.ListaGenerica;
 
 

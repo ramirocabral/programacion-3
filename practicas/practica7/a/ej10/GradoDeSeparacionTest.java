@@ -1,6 +1,7 @@
-package practica7.ej10;
+package practica7.a.ej10;
 
 import grafos.*;
+import grafos.util.GradosDeSeparacion;
 
 public class GradoDeSeparacionTest {
     public static void main(String[] args) {
